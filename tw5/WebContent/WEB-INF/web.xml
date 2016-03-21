@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<web-app> 
+ 
+  <display-name>Servlets y patrón MVC</display-name> 
+ 
+  <description> 
+    Práctica que combina servlets y JSPs dentro de una arquitectura MVC. 
+  </description> 
+ 
+  <context-param> 
+      <param-name>url</param-name> 
+      <param-value>jdbc:mysql://localhost/topweb</param-value> 
+    </context-param> 
+ 
+    <context-param> 
+      <param-name>driver</param-name> 
+      <param-value>com.mysql.jdbc.Driver</param-value> 
+  </context-param> 
+ 
+  <context-param> 
+      <param-name>user</param-name> 
+      <param-value>itm</param-value> 
+  </context-param> 
+ 
+  <context-param> 
+      <param-name>password</param-name> 
+      <param-value>itmexicali</param-value> 
+  </context-param> 
+ 
+  <servlet> 
+ 
+    <servlet-name>ServletFutbol</servlet-name> 
+    <servlet-class>mvc.ServletControlador</servlet-class> 
+ 
+    <init-param> 
+      <param-name>inicializador</param-name> 
+      <param-value>mvc.init.InicializadorDatos</param-value> 
+    </init-param> 
+ 
+    <init-param> 
+      <param-name>evento.consulta</param-name> 
+      <param-value>mvc.event.EventoConsulta</param-value> 
+    </init-param> 
+ 
+    <init-param> 
+      <param-name>evento.voto</param-name> 
+      <param-value>mvc.event.EventoVoto</param-value> 
+    </init-param> 
+ 
+  </servlet> 
+ 
+  <servlet-mapping> 
+    <servlet-name>ServletFutbol</servlet-name> 
+    <url-pattern>/futbol</url-pattern> 
+  </servlet-mapping> 
+ 
+  <welcome-file-list> 
+     <welcome-file>Futbol.jsp</welcome-file> 
+  </welcome-file-list> 
+ 
+</web-app>

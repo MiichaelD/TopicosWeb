@@ -1,0 +1,170 @@
+
+body
+{
+        color: white;
+	background: grey;
+	background-image: url('images/site/1715.jpg');
+	background-repeat:no-repeat;	
+	background-attachment:fixed;
+	background-position:center; 
+        background-size: 100% auto;
+        align: center;
+        margin: auto;
+}
+
+
+ul{
+    padding: 0;
+    margin: 0;    
+}
+
+li {
+	display:block;
+	margin:1em;
+	padding:0;
+        font-weight:normal;
+}
+
+li a:hover {
+    text-decoration:blink underline;
+}
+
+
+a{
+    color:#00F;
+    text-decoration:none;
+}
+
+a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+
+.logout{
+    padding-left: 10em;
+    font-size: 25px;    
+}
+
+.logout a{
+    color:red;
+    background-color: black;
+}
+
+
+#logindiv {
+    
+    height:350px;
+    width: 600px;
+}
+
+fieldset{
+	margin:0;
+	padding:0;
+	border:1px solid #FFF;
+        color:#FFF;
+	font-family: sans-serif,Verdana;
+	background:#000 url(images/site/form_top.gif) repeat-x;
+        width: 240px;
+}
+
+#commentPoster{
+    width:800px;   
+}
+
+#commentPoster label input{
+    width:460px;
+}
+
+#friendbardiv fieldset{
+    width:800px;
+}
+
+#friendbardiv label input{
+    width:550px;
+}
+
+#about fieldset{
+    width:800px;
+}
+
+#result fieldset{
+    width:800px;
+}
+
+#result li{
+    font-size: 25px;
+}
+
+#logindiv td{
+    width: 240px;
+    
+}
+
+#logindiv input{		
+	width: auto;
+	border:1px solid #111;
+	padding:5px 3px;
+}	
+
+#error{
+    color:red;   
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+#home{
+    padding-left: 10em;
+    
+}
+
+
+#friendsdiv fieldset{
+    width:800px;
+}
+
+#friendsdiv li{
+    float: left;
+    color: #ff33cc;
+    text-align: center;
+    font-size: 20px;
+}
+
+#friendsdiv a {
+    color:#ffff66;
+}
+
+#commentsdiv fieldset{
+    width:800px;
+}
+
+#commentsdiv{
+    width:800px;
+}
+
+#commentsdiv a{
+    color: red;
+    float: right;
+}
+
+#commentsdiv li{
+    display:block;
+    float:none; 
+}
+
+.usr{
+    float: left;
+    font-size: 20px;
+    color: white;
+}
+
+.cmmnt{
+    float: none;
+    font-size: 25px; 
+    color: purple;
+}
+
+.date{
+    float: right;
+}

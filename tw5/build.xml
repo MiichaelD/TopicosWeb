@@ -1,0 +1,23 @@
+<project name="Programa JSP" default="war">
+	<target name="clean" description="Borrar el war">
+			<delete>
+				<fileset dir="." >
+					<include name="jspMVCJDBC.war"/>
+				</fileset>
+			</delete>
+	</target>	
+	<target name="war" description="Construye el WAR">
+		<jar destfile="jspMVCJDBC.war">
+			<zipfileset dir="WebContent"/>
+			<zipfileset dir="bin" prefix="WEB-INF/classes"/>
+		</jar>
+	</target>
+	<target name="copy" description="Copiar war a glassfish">
+		<copy todir="C:\\glassfish\\domains\\domain1\\autodeploy">
+			<fileset dir="." >
+			 <include name="jspMVCJDBC.war"/>
+			</fileset>
+		</copy>
+	</target>	
+	<target name="deploy" description="Deply.WAR" depends="clean,war,copy" />
+</project>
